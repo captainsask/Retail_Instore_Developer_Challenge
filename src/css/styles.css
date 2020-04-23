@@ -1,0 +1,40 @@
+#navigation {
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  justify-content: center;
+  align-items: baseline;
+  margin: 1rem 2rem 0.5rem 2rem;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+
+.city-wrapper {
+  flex-grow: 1;
+  outline: none;
+  text-align: center;
+  height: 40px;
+}
+.nav-item {
+  display: inline-block;
+  cursor: pointer;
+  color: lightgrey;
+  position: relative;
+  width: auto;
+}
+
+.nav-item:hover {
+  color: lightblue;
+}
+
+.selected .nav-item {
+  color: black;
+  transition: 0.5s ease-in-out;
+}
+
+#selected-bar {
+  position: absolute;
+  border-bottom: 1px solid black;
+  bottom: -1px;
+  transition: 0.5s ease;
+}
