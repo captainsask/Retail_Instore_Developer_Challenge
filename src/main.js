@@ -52,7 +52,7 @@ const setSelectedBarWidthOffset = (selectedEl) => {
 const getTimeForCity = async (selectedCity) => {
   // if the user has not update the timezones for a city we won't display the clock
   document.getElementById("clock-wrapper").style.display = "none";
-  //If there is a timezone entry for that city though we will do our calculations to dispaly the local time
+  // If there is a timezone entry for that city though we will do our calculations to dispaly the local time
   if (_timezones[selectedCity]) {
     document.getElementById("clock-wrapper").style.display = "flex";
     const now = new Date();
@@ -68,14 +68,22 @@ const getTimeForCity = async (selectedCity) => {
     const currentHours = now.getHours() + totalHourOffset;
     const currentMinutes = now.getMinutes() + totalMinuteOffset;
 
-    const amPm = currentHours < 12 || currentHours > 24 ? "am" : "pm";
-
+    // Need to determine the display for 12 hour clock and am/pm suffix on clock
+    let amPm = "am";
     let displayHours = currentHours;
     if (currentHours > 12) {
       displayHours = currentHours - 12;
+      amPm = "pm";
+    }
+    if (currentHours === 12) {
+      amPm = "pm";
+    }
+    if (currentHours === 24) {
+      amPm = "am";
     }
     if (currentHours > 24) {
       displayHours = currentHours - 24;
+      amPm = "am";
     }
     const displayMinutes =
       currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
