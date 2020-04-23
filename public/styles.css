@@ -85,7 +85,7 @@
 ***************/
 
 #clock-wrapper {
-  display: flex;
+  display: none;
   align-items: baseline;
   justify-content: center;
   margin-top: 2rem;
