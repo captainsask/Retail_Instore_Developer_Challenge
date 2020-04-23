@@ -53,6 +53,7 @@ const createNavBar = () => {
   });
 
   selectCity(_cities[0].section);
+  window.onresize = () => setSelectedBarWidth("selected");
 };
 
 createNavBar();
