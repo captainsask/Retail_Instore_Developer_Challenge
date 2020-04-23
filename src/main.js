@@ -1,4 +1,4 @@
-import navigation from "../data/navigation.json";
+import { cities as _cities } from "./navigation.json";
 
 const navItemOnClick = (selected) => {
   const selectedElement = document.getElementsByClassName(selected)[0];
@@ -31,9 +31,9 @@ const selectCity = (selectedCity) => {
   setSelectedBarWidth(selectedCity);
 };
 
-(function createNavBar() {
+const createNavBar = () => {
   const navigationEl = document.getElementById("navigation");
-  navigation.cities.forEach((city, index) => {
+  _cities.forEach((city, index) => {
     const cityWrapper = document.createElement("div");
     cityWrapper.classList.add(city.section);
     cityWrapper.classList.add("city-wrapper");
@@ -52,5 +52,7 @@ const selectCity = (selectedCity) => {
     navigationEl.append(cityWrapper);
   });
 
-  selectCity(navigation.cities[0].section);
-})();
+  selectCity(_cities[0].section);
+};
+
+createNavBar();
