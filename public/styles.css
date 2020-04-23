@@ -1,3 +1,7 @@
+/***************
+* NAVIGATION SPECIFIC CSS
+***************/
+
 #navigation {
   display: flex;
   flex-direction: column;
@@ -74,4 +78,35 @@
     padding-left: 3.125rem;
     padding-right: 3.125rem;
   }
+}
+
+/***************
+* TIME CLOCK SPECIFIC CSS
+***************/
+
+#clock-wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+#time-clock {
+  display: flex;
+  font-family: "Courier New", Courier, monospace;
+  color: lightgreen;
+  background-color: black;
+  padding: 0.5rem;
+}
+
+#hours:after {
+  content: ":";
+}
+
+.time-prefix {
+  padding-right: 1rem;
+}
+
+#am-pm {
+  padding-left: 5px;
 }

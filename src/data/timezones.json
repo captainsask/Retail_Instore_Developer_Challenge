@@ -1,0 +1,11 @@
+{
+  "timezones": {
+    "cupertino": { "hour": -7, "minute": 0 },
+    "new-york-city": { "hour": -4, "minute": 0 },
+    "london": { "hour": 1, "minute": 0 },
+    "amsterdam": { "hour": 2, "minute": 0 },
+    "tokyo": { "hour": 9, "minute": 0 },
+    "hong-kong": { "hour": 8, "minute": 0 },
+    "sydney": { "hour": 10, "minute": 0 }
+  }
+}
